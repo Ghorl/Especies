@@ -3,23 +3,24 @@ from numpy import *
 
 class Species:
   
-  def __init__(self):
+  def __init__(self):#Constructor
   #Leyendo el csv y dandole una variable
-   datos=pd.read_csv('Index of Species.csv',header=0)
-   self.DfSpecies=datos['Species']
+   self.datos=pd.read_csv('Index of Species.csv',header=0)
    self.ListofSpecies=[]
 
   def Search_Specie(self):
     especie=input("Ingrese el nombre de la especie que desee buscar: ")
     
-    if especie in self.DfSpecies:
-      print("Especie encontrada. Agruegada a la lista")
+    if especie in self.datos['Species']:
+      print("Especie encontrada. Agregada a la lista")
       self.ListofSpecies.append(especie)
     else:
        print("Especie no encontrada")
 
   def Report(self):
-     columns=["Especie"]
+     #columns=["Especie"]
+     #df=pd.DataFrame([self.ListofSpecies],columns=columns)  
+     pass
 
 def Menu():
     especies=Species()
