@@ -2,21 +2,21 @@ import pandas as pd
 from numpy import *
 
 class Species:
+  
+  def __init__(self):
   #Leyendo el csv y dandole una variable
-  datos=pd.read_csv('Index of Species.csv',header=0)
-  #La columna especie se ha metida en esta variable
-  DfSpecies=datos['Species']
-  DfFamily=datos['Family']
-  DfCategory=datos['']
-  DfGender=datos['']
+   datos=pd.read_csv('Index of Species.csv',header=0)
+   DfSpecies=datos['Species']
+   DfFamily=datos['Family']
+   DfCategory=datos['']
+   DfGender=datos['']
 
-
-  def Search_Specie():
-    ListofSpecies=[]
+  def Search_Specie(self):
+    self.ListofSpecies=[]
     especie=input("Ingrese el nombre de la especie que desee buscar: ")
-    ListofSpecies.append(especie)
+    self.ListofSpecies.append(especie)
 
-  def Report():
+  def Report(self):
     pass
   
 def Menu():
