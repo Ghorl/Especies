@@ -19,8 +19,7 @@ class Species:
        print("Especie no encontrada")
 
   def Report(self):
-     columns=["Especie"]
-     df=pd.DataFrame([self.ListofSpecies],columns=columns)
+     df=pd.DataFrame(self.ListofSpecies,columns=['Especie'])
      print(df)
   
 
